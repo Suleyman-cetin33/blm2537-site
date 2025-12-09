@@ -1,0 +1,297 @@
+/* ==================================== */
+/* 1. KÖK DEĞİŞKENLER VE SIFIRLAMA      */
+/* ==================================== */
+:root {
+    /* Renk Paleti */
+    --ana-renk: #3498db;
+    /* Mavi */
+    --ikincil-renk: #2c3e50;
+    /* Koyu Gri */
+    --arka-plan: #ecf0f1;
+    /* Çok Açık Gri */
+    --kart-gölge: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    /* Padding ve border'ın genişliği etkilememesi için */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* DÜZELTME: Doğru CSS değişkeni kullanıldı */
+    background-color: var(--arka-plan);
+    color: #333;
+}
+
+/* ==================================== */
+/* 2. HEADER VE NAVİGASYON              */
+/* ==================================== */
+.site-header {
+    background-color: var(--ikincil-renk);
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px var(--kart-gölge);
+}
+
+.ana-nav {
+    z-index: 10;
+}
+
+.ana-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--ana-renk);
+}
+
+.ana-nav li {
+    padding: 15px 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.aktif {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px 20px;
+    margin: -15px -20px;
+}
+
+
+
+/* ==================================== */
+/* 3. ANA İÇERİK VE POST KARTLARI       */
+/* ==================================== */
+.main-icerik {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.post-listesi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.post-kart {
+    flex: 1 1 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--kart-gölge);
+    transition: transform 0.3s;
+}
+
+.post-kart:hover {
+    transform: translateY(-5px);
+}
+
+.post-meta {
+    display: block;
+    color: var(--ana-renk);
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.devam-oku {
+    display: inline-block;
+    color: var(--ana-renk);
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ==================================== */
+/* GALERİ SAYFASI STİLLERİ (3'LÜ IZGARA VE JS LIGHTBOX) */
+/* ==================================== */
+
+.galeri-fotograflar {
+    /* DÜZELTME: Grid ile 3 sütunluk düzen sağlanır */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* KRİTİK: 3 eşit sütun */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.galeri-item {
+    /* DÜZELTME: Flex kuralı Grid kullandığımız için kaldırıldı */
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    /* Tıklanabilir olduğunu belli eder */
+}
+
+.galeri-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.galeri-item p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 0;
+}
+
+/* ==================================== */
+/* GERİ DÖN BUTONU STİLLERİ             */
+/* ==================================== */
+
+.geri-don-alani {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* DÜZELTME: Yan yana gelmeleri için boşluk eklenir */
+.geri-don-alani a {
+    margin: 0 10px;
+    /* Butonlar arasına 10px boşluk ekler */
+}
+
+.btn-ana-sayfa {
+    display: inline-block;
+    background-color: var(--ana-renk);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-ana-sayfa:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* YENİ: Galeri Sayfasına Dön butonu stili */
+.btn-galeri-sayfasi {
+    display: inline-block;
+    background-color: var(--ikincil-renk);
+    /* Koyu gri (Farklılaştırmak için) */
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-galeri-sayfasi:hover {
+    background-color: #3f556d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================================== */
+/* JAVASCRIPT LIGHTBOX STİLLERİ         */
+/* ==================================== */
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.kapat-butonu {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.kapat-butonu:hover {
+    opacity: 1;
+}
+
+/* ==================================== */
+/* 4. FOOTER                            */
+/* ==================================== */
+.site-footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--ikincil-renk);
+    color: #bdc3c7;
+    margin-top: 40px;
+}
+
+/* ==================================== */
+/* 5. DUYARLILIK (RESPONSIVE) AYARLARI  */
+/* ==================================== */
+
+@media (max-width: 900px) {
+
+    /* Orta boyutlu cihazlarda 2'li düzen */
+    .galeri-fotograflar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header h1 {
+        font-size: 1.5em;
+    }
+
+    .ana-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ana-nav li {
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .post-kart,
+    .galeri-item {
+        /* Mobil cihazlarda tam genişlik */
+        flex-basis: 100%;
+    }
+
+    .galeri-fotograflar {
+        /* Mobil cihazlarda tekli sütun */
+        grid-template-columns: 1fr;
+    }
+}
