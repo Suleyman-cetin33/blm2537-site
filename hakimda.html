@@ -1,29 +1,70 @@
-<html>
+<!DOCTYPE html>
+<html lang="tr">
 
 <head>
-    <title>hakkimda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımda | Süleyman Çetin Blog</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body style="background-color: aqua;">
+<body style="background-color: rgb(211, 219, 220);">
+    <header class="site-header">
+        <h1>HAKKIMDA</h1>
+    </header>
+    <nav class="ana-nav">
+        <ul>
+            <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+            <li><a href="iletisim.html" class="nav-link aktif">Benimle İletişime Geç</a></li>
 
-    <h1 style="color:red,">ONDAKİKA</h1>
-    <p style="font-size:26;color: azure;">bu <b><i><u>akşam</u></i></b> trt1 de</p> <br><br>
-    <h1>belgesel</h1> <br><br>
-    <p>var.</p>
 
-    <img alt="ekran görüntüsü" src="./Ekran görüntüsü 2025-09-24 184538.png" width="20%" height="20%"
-        title="deneme resim" style="border-style: dotted; border-width: 14px; 
-        border-color: brown;border-radius: 100px;">
-    <img alt="ekran görüntüsü" src="./Ekran görüntüsü 2025-09-24 184538.png" width="20%" height="20%"
-        title="deneme resim" style="border-style: dotted; border-width: 14px; 
-        border-color: rgb(165, 42, 159);border-radius: 400px;">
-    <br><br>
-    <a href="https://www.ankara.edu.tr"> Ankara üniversitesi</a.>
-        <br><br>
-        <a href="https://www.ankara.edu.tr"> <img src="20200406212436!Ankara_Üniversitesi_logosu.png" alt=""></a.>
-            <br><br>
-            <a href="index.html"> Ankara üniversitesimmm</a.>
+
+        </ul>
+    </nav>
+    <main class="main-icerik">
+        <div class="hakkimda-kutu" onclick="openLightbox(this)">
+            <img src="assets/IMG-20251104-WA0018.jpg" data-large-src="assets/IMG-20251104-WA0012.jpg"
+                alt="Eskişehir Porsuk Çayı'nda gondollar.">
+
+        </div>
+
+        <div class="hakkimda-kutu">
+
+            <h1>Merhaba, Ben Süleyman Çetin</h1>
+            <p style="text-align: left;font-size: large;">
+                Ben Ankara Üniversitesi'nde eğitim gören bir Bilgisayar Mühendisliği öğrencisi ve tutkulu bir yazılım
+                geliştiricisiyim.
+
+                Çocukluğumdan beri "bu nasıl çalışıyor?" sorusunun peşinden gidiyorum. Şimdi ise bu merakımı, verimli ve
+                temiz kod yazarak dijital ürünler geliştirmeye yönlendiriyorum.
+            </p>
+            <p style="text-align: left;font-size: large;">
+                Bu platformda teknik yetkinliklerimi paylaşıyor, karmaşık problemleri nasıl çözdüğümü anlatıyor ve
+                geliştirdiğim açık kaynak projeleri sunuyorum. Sadece buda değil gezdiğim yerler önerilerim aklınıza
+                gelebilecek herşey burada.
+            </p>
+            <p style="text-align: left;font-size: large;">
+                Hedefim: Kendi gelişimimi ve doluca yaşadığım (yaşaya bilirsek :) ) hayatı tek bir yerden yani bu
+                siteden görmek.
+            </p>
+            <p style="text-align: left;font-size: large;">
+                Projelerimi incelemek için <a href="https://github.com/Suleyman-cetin33/"> Github profilime</a> göz
+                atabilir veya benimle <a href="iletisim.html"> iletişime geçebilirsiniz.</a>
+            </p>
+
+        </div>
+        <section class="geri-don-alani">
+
+
+            <a href="index.html" class="btn-ana-sayfa">
+                &larr; Ana Sayfaya Geri Dön
+            </a>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <footer class="site-footer">
+        <p>&copy; 2025 Süleyman Çetin Blog</p>
+    </footer>
 </body>
-
 
 </html>
