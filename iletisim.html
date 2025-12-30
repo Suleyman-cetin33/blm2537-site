@@ -1,6 +1,96 @@
-<html>
+<!DOCTYPE html>
+<html lang="tr">
 
 <head>
-    <title>iletisim</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Süleyman Çetin</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
+
+<body>
+
+    <header class="site-header">
+        <h1>SÜLEYMAN ÇETİN</h1>
+    </header>
+
+    <nav class="ana-nav">
+        <ul>
+            <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+            <li><a href="hakimda.html" class="nav-link">Hakkımda</a></li>
+            <li><a href="yazilar.html" class="nav-link">Yazılar</a></li>
+            <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+            <li><a href="iletisim.html" class="nav-link aktif">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-icerik">
+
+        <div class="iletisim-kapsayici">
+
+            <section class="iletisim-form-alani">
+                <h2>Bana Yazın</h2>
+                <p>Görüşlerinizi, önerilerinizi veya sadece bir merhabayı bekliyorum.</p>
+
+                <form action="gonder.php" method="POST" class="form-yapisi">
+
+                    <div class="form-grup">
+                        <label for="ad">Adınız Soyadınız</label>
+                        <input type="text" id="ad" name="isim" placeholder="Örn: Ahmet Yılmaz" required>
+                    </div>
+
+                    <div class="form-grup">
+                        <label for="email">E-posta Adresiniz</label>
+                        <input type="email" id="email" name="email" placeholder="Örn: ahmet@mail.com" required>
+                    </div>
+
+                    <div class="form-grup">
+                        <label for="mesaj">Mesajınız</label>
+                        <textarea id="mesaj" name="mesaj" rows="5" placeholder="Mesajınızı yazın..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-gonder">Gönder</button>
+                </form>
+            </section>
+
+            <section class="iletisim-bilgi-alani">
+                <h3>İletişim Kanalları</h3>
+                <div class="bilgi-kartlari">
+
+                    <div class="bilgi-kart">
+                        <h4>Instagram</h4>
+                        <p>suleyman_cetin__</p>
+                    </div>
+
+                    <div class="bilgi-kart">
+                        <h4>E-Mail</h4>
+                        <p>cetinsuleyman2005@gmail.com</p>
+                    </div>
+
+                    <div class="bilgi-kart">
+                        <h4>Telefon</h4>
+                        <p>+90 552 778 65 99</p>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+        <section class="geri-don-alani">
+
+
+            <a href="index.html" class="btn-ana-sayfa">
+                &larr; Ana Sayfaya Geri Dön
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Süleyman Çetin Blog</p>
+    </footer>
+
+</body>
+
 </html>
