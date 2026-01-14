@@ -1,0 +1,121 @@
+<html>
+
+<head>
+
+
+    <script language="javascript">
+        alert("örnek mesaj");/*uyarı yazdırır ekrana mesaj yazdırdı*/
+    </script>
+</head>
+<script>
+    function hesapla() {
+        var k1 = document.getElementById("kenar1").value;
+        var k2 = document.getElementById("kenar2").value;
+        if (k1 == 0 && k2 == 0) {
+
+            alert("örnek mesaj");/*uyarı yazdırır ekrana mesaj yazdırdı*/
+
+        }
+        else {
+            k1 = Number(k1);
+            k2 = Number(k2);
+            var alan = k1 * k2;
+        }
+        document.getElementById("sonuc").innerHTML = "alan" + alan;
+
+    } </script>
+<script>
+    function hesaplacember() {
+        var cap = document.getElementById("cap").value;
+        var cap = parseFloat(cap);
+        var alancember = cap * cap * 3.14;
+        document.getElementById("sonuc1").innerHTML = "alancember" + alancember;
+
+    }
+</script>
+<script>
+    function hesaplatop() {
+        var sayi1 = document.getElementById("sayi1").value;
+        var sayi2 = document.getElementById("sayi2").value;
+
+        var sayi1 = parseFloat(sayi1);
+        var sayi2 = parseFloat(sayi2);
+
+        var toplam = sayi1 + sayi2;
+        document.getElementById("sonuc33").innerHTML = "toplam" + toplam;
+
+    }
+</script>
+<script>
+    function hesaplacik() {
+        var sayi1 = document.getElementById("sayi1").value;
+        var sayi2 = document.getElementById("sayi2").value;
+
+        var sayi1 = parseFloat(sayi1);
+        var sayi2 = parseFloat(sayi2);
+
+        var cikar = sayi1 - sayi2;
+        document.getElementById("sonuc33").innerHTML = "toplam" + cikar;
+
+    }
+</script>
+<script>
+    function hesaplacarp() {
+        var sayi1 = document.getElementById("sayi1").value;
+        var sayi2 = document.getElementById("sayi2").value;
+
+        var sayi1 = parseFloat(sayi1);
+        var sayi2 = parseFloat(sayi2);
+
+        var çarp = sayi1 * sayi2;
+        document.getElementById("sonuc33").innerHTML = "toplam" + çarp;
+
+    }
+</script>
+<script>
+    function hesaplabol() {
+        var sayi1 = document.getElementById("sayi1").value;
+        var sayi2 = document.getElementById("sayi2").value;
+
+        var sayi1 = parseFloat(sayi1);
+        var sayi2 = parseFloat(sayi2);
+
+        var toplam = sayi1 / sayi2;
+        document.getElementById("sonuc33").innerHTML = "toplam" + toplam;
+
+    }
+</script>
+
+<body>
+    <p id="p1"></p>
+    <script>document.getElementById("p1").innerHTML = "merhaba"; /* atama yaptı p1 e*/
+    </script>
+    <button onclick="document.write('blm33')">buraya </button>
+    <button onclick="console.log('blm33')">buraya2 </button>
+    <input type="text" id="kenar1" placeholder="kısakenar">
+    <input type="text" id="kenar2" placeholder="uzunkenar">
+
+    <input type="button" value="hesapla" id="hesapla" onclick="hesapla()">
+    <p id="sonuc"></p>
+
+
+
+    <input type="text" id="cap" placeholder="cap1">
+
+    <input type="button" value="cember" id="hesapla" onclick="hesaplacember()">
+    <p id="sonuc1"></p>
+
+
+
+    <p>Sayı 1 <input type="text" id="sayi1" placeholder="sayi1"></p>
+    <p>Sayı 2 <input type="text" id="sayi2" placeholder="sayi2"></p>
+    <input type="button" value="toplam" id="hesapla" onclick="hesaplatop()">
+    <input type="button" value="cikar" id="hesapla" onclick="hesaplacik()">
+    <input type="button" value="çarp" id="hesapla" onclick="hesaplacarp()">
+    <input type="button" value="böl" id="hesapla" onclick="hesaplabol()">
+    <p id="sonuc33">sonuc</p>
+
+
+</body>
+
+</html>
